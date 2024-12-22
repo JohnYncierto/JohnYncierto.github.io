@@ -8,8 +8,11 @@ body {
     background-color: #f9f9f9;
 }
 
-h1, h2, h3 {
+h1{
     color: #b30000;
+}
+h2, h3 {
+    color: #0030b3;
 }
 /* Header Styles */
 header {
@@ -24,9 +27,9 @@ header .banner {
 }
 
 header .banner img {
-    width: 100%; /* Stretch the image to full width */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Ensure no extra spacing below the image */
+    width: 100vw; /* Stretches the image to the full width of the viewport */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes gaps below the image */
     margin: 0;
     padding: 0;
 }
