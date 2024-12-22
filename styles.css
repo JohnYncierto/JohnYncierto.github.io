@@ -17,7 +17,7 @@ h1 {
     padding-bottom: 5px; /* Adds spacing between text and underline */
 }
 h2 {
-    font-size: 2rem; /* Smaller than h1 */
+    font-size: 1.5rem; /* Smaller than h1 */
     color: blue; /* Keep the blue color */
     text-decoration: none; /* Remove underline from h2 */
     font-weight: bold;
@@ -78,7 +78,7 @@ nav ul li a:hover {
 /* Main Section */
 main {
     padding: 20px;
-    background-color: #fff;
+    background-color: #f4f4f4;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     max-width: 1200px;
@@ -104,12 +104,15 @@ section h2 {
 }
 
 #cta .cta-button {
-    background-color: #0056b3;
-    color: #fff;
+    background-color: #f9f9f9;
+    color: #000000;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 1.1rem;
     border-radius: 5px;
+}
+#cta h1 {
+    color: yellow; /* Change the text color to yellow */
 }
 
 #cta .cta-button:hover {
