@@ -36,13 +36,17 @@ header .banner {
 }
 
 header .banner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Stretch the image to full width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure no extra spacing below the image */
+    margin: 0;
+    padding: 0;
 }
 
 header .tagline {
-    font-size: 1.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
     margin-top: 10px;
     font-style: italic;
 }
