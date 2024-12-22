@@ -25,6 +25,10 @@ h2 {
     text-decoration: none;
     border-bottom: none; 
 }
+#promos h2 {
+    border-bottom: none; /* Remove lines for h2 in #promos section */
+    text-decoration: none;
+}
 /* Header Styles */
 header {
     background-color: #007bff;
