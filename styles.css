@@ -20,13 +20,6 @@ header {
     padding: 20px 10px;
 }
 
-header .branding {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
 header .branding .logo {
     height: 60px;
 }
