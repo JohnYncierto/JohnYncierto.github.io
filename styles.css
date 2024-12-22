@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    color: #0056b3;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header .branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .branding .logo {
+    height: 60px;
+}
+
+header .banner {
+    margin-top: 20px;
+}
+
+header .banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* CTA Section */
+#cta {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cta .cta-button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+#cta .cta-button:hover {
+    background-color: #003d80;
+}
+
+/* Branches Section */
+#branches ul {
+    list-style: none;
+    padding: 0;
+}
+
+#branches ul li {
+    background: #f0f0f0;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+footer .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer .social-media li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .social-media li a:hover {
+    color: #007bff;
+}
