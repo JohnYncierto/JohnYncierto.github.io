@@ -27,7 +27,7 @@ header .banner {
 }
 
 header .banner img {
-    width: 100vw; /* Stretches the image to the full width of the viewport */
+    width: 110vw; /* Stretches the image to the full width of the viewport */
     height: auto; /* Maintains the aspect ratio */
     display: block; /* Removes gaps below the image */
     margin: 0;
