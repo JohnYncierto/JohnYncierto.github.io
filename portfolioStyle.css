@@ -136,6 +136,21 @@ nav ul li a:hover {
     justify-content: space-between;
 }
 
+.profile-img {
+    max-width: 150px;
+    border-radius: 50%; /* Makes the image circular */
+}
+.additional-images {
+    display: flex;
+    gap: 10px; /* Space between images */
+    margin-top: 20px; /* Space above the image gallery */
+}
+
+.additional-images img {
+    max-width: 100px;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
 #about img {
     max-width: 200px;
     border-radius: 50%;
