@@ -138,7 +138,7 @@ nav ul li a:hover {
 
 .profile-img {
     max-width: 150px;
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 20%; /* Makes the image circular */
 }
 .additional-images {
     display: flex;
@@ -148,7 +148,6 @@ nav ul li a:hover {
 
 .additional-images img {
     max-width: 100px;
-    border-radius: 10px; /* Optional: rounded corners */
 }
 
 #about img {
