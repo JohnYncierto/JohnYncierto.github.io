@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-    background: #007bff; /* Same blue as the banner */
+    background: #3366FF; /* Adjusted to match the banner blue */
     padding: 15px 30px;
     position: fixed;
     top: 0;
@@ -16,14 +16,14 @@ nav {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Centers everything */
 }
 
 .logo {
     color: white;
     font-size: 28px;
     font-weight: bold;
-    margin: 0;
+    margin-right: 20px;
 }
 
 nav ul {
@@ -31,10 +31,11 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    gap: 20px; /* Adds spacing between items */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
@@ -46,6 +47,16 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+    background-color: aliceblue;
+    color: #007bff;
+}
+
+/* Prevents elements from touching the three dots */
+@media screen and (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 
