@@ -84,7 +84,6 @@ nav ul li a.projLink {
 
 nav ul li a:hover {
     background-color: aliceblue;
-    padding: 1px;
     border-radius: 10px;
     color: #000000;
 }
