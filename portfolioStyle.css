@@ -48,6 +48,17 @@ nav {
     gap: 20px; /* Space between tabs */
 }
 
+.navLink {
+    color: white; 
+    text-decoration: none;
+}
+
+.projLink {
+    color: #000000; 
+    text-decoration: underline;
+    font-weight: normal;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -67,13 +78,18 @@ nav ul li a {
     font-weight: bold;
 }
 
+nav ul li a.projLink {
+    color: #000000; /* Override the white color from the navLink class */
+  }
+
 nav ul li a:hover {
-    text-decoration: underline;
     background-color: aliceblue;
     padding: 10px;
     border-radius: 10px;
     color: #000000;
 }
+
+
 
 /* Prevents elements from touching the three dots */
 @media screen and (max-width: 1200px) {
@@ -114,28 +130,9 @@ nav ul li a:hover {
     margin: 0 0 10px;
 }
 
-.navLink {
-    color: white; 
-    text-decoration: none;
-}
 
-.projLink {
-    color: #000000; 
-    text-decoration: underline;
-    font-weight: normal;
-}
 
-.navLink:hover {
-    text-decoration: underline;
-    background-color: aliceblue;
-    padding: 10px;
-    border-radius: 10px;
-    color: #000000;
-}
 
-.projLink:hover {
-    color: #4e6aff; /* Adjust to your preferred hover color */
-}
 
 #about {
     display: flex;
