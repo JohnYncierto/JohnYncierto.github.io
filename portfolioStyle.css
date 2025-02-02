@@ -121,6 +121,9 @@ a {
 
 a:hover {
     text-decoration: underline;
+    background-color: aliceblue;
+    color: #000;
+    border-radius: 10px;
 }
 
 #about {
