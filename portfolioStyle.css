@@ -51,6 +51,8 @@ nav {
 .navLink {
     color: white; 
     text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .projLink {
@@ -85,6 +87,8 @@ nav ul li a.projLink {
 nav ul li a:hover {
     background-color: aliceblue;
     color: #000000;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Prevents elements from touching the three dots */
