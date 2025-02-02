@@ -7,24 +7,23 @@ body {
 }
 
 nav {
-    background: #333;
-    padding: 10px 20px;
-    text-align: center;
+    background: #007bff; /* Same blue as the banner */
+    padding: 15px 30px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
-    margin-left: 20px;
+    margin: 0;
 }
 
 nav ul {
@@ -42,6 +41,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
