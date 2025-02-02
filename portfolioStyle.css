@@ -19,7 +19,7 @@ body {
 
 nav {
     background: #4e6aff; /* Adjusted to match the banner blue */
-    padding: 5px 20px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,6 +41,7 @@ nav {
 }
 
 .nav-center {
+    color: white;
     flex: 1;
     display: flex;
     justify-content: center;
