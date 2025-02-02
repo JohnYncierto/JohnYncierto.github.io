@@ -84,12 +84,10 @@ nav ul li a.projLink {
 
 nav ul li a:hover {
     background-color: aliceblue;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     color: #000000;
 }
-
-
 
 /* Prevents elements from touching the three dots */
 @media screen and (max-width: 1200px) {
@@ -129,10 +127,6 @@ nav ul li a:hover {
 .section h2 {
     margin: 0 0 10px;
 }
-
-
-
-
 
 #about {
     display: flex;
