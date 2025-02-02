@@ -1,5 +1,16 @@
+h1, h2, h3, .logo, nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+body, p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
     margin: 0;
     padding-top: 50px;
     background-color: #f4f4f4;
