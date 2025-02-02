@@ -18,11 +18,12 @@ body {
 }
 
 nav {
-    background: #3366FF; /* Adjusted to match the banner blue */
-    padding: 15px 30px;
+    background: #4e6aff; /* Adjusted to match the banner blue */
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
+    height: 50px;
     width: 100%;
     z-index: 1000;
     display: flex;
