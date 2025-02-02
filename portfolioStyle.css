@@ -115,19 +115,26 @@ nav ul li a:hover {
 }
 
 .navLink {
-    color: white; /* or any color you want */
+    color: white; 
     text-decoration: none;
 }
 
 .projLink {
-    color: #000000; /* A different color */
+    color: #000000; 
     text-decoration: underline;
     font-weight: normal;
 }
 
-a:hover {
+.navLink:hover {
     text-decoration: underline;
+    background-color: aliceblue;
+    padding: 10px;
     border-radius: 10px;
+    color: #000000;
+}
+
+.projLink:hover {
+    color: #4e6aff; /* Adjust to your preferred hover color */
 }
 
 #about {
