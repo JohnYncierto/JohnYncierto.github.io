@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Background Parallax Effect
     document.addEventListener("scroll", function () {
         let scrollPosition = window.scrollY;
-        document.body.style.backgroundPosition = `center ${scrollPosition * 0.3}px`;
+        document.body.style.backgroundPosition = `center ${scrollPosition * 0.1}px`;
     });
 });
 
