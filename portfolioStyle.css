@@ -9,6 +9,9 @@ body, p {
 }
 
 body {
+    transform: scale(0.8);
+    width: 125%; /
+    overflow-x: hidden;
     line-height: 1.6;
     font-size: 20px;
     margin: 0;
@@ -18,7 +21,7 @@ body {
 }
 
 nav {
-    background: #4e6aff; /* Adjusted to match the banner blue */
+    background: #4e6aff; 
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -28,7 +31,7 @@ nav {
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Centers everything */
+    justify-content: space-between; 
     line-height: 40px;
 }
 
@@ -45,7 +48,7 @@ nav {
     flex: 1;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between tabs */
+    gap: 20px; 
 }
 
 .navLink {
@@ -66,7 +69,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Adds spacing between items */
+    gap: 20px; 
 }
 
 nav ul li {
@@ -91,7 +94,6 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* Prevents elements from touching the three dots */
 @media screen and (max-width: 1200px) {
     nav {
         flex-direction: column;
@@ -114,7 +116,7 @@ nav ul li a:hover {
 
 #about {
     display: flex;
-    align-items: flex-start; /* Aligns text and image at the top */
+    align-items: flex-start; 
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
@@ -165,7 +167,7 @@ nav ul li a:hover {
 }
 
 .section p {
-    flex: 1; /* Allows text to take remaining space */
+    flex: 1; 
 }
 
 .section h2 {
@@ -174,8 +176,8 @@ nav ul li a:hover {
 
 
 .banner {
-    width: 100vw; /* Full viewport width */
-    text-align: center; /* Center image if smaller than viewport */
+    width: 100vw;
+    text-align: center; 
 }
 
 .banner img {
@@ -185,7 +187,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #4e6aff; /* Same as the nav bar color */
+    background-color: #4e6aff; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -197,17 +199,17 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: center; /* Center everything horizontally */
+    justify-content: center; 
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px; /* Add space between elements */
-    text-align: center; /* Ensures text is centered */
+    gap: 20px; 
+    text-align: center; 
 }
 
 .footer-left, .footer-right {
     flex: 1;
     max-width: 50%;
-    font-size: 18px; /* Increase text size */
+    font-size: 18px; 
 }
 
 .footer-left ul {
@@ -229,8 +231,8 @@ footer {
 }
 
 .footer-right {
-    text-align: center; /* Center text */
-    font-size: 18px; /* Increase text size */
+    text-align: center; 
+    font-size: 18px; 
 }
 
 footer p {
