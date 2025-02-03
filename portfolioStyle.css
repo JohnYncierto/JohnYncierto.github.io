@@ -9,7 +9,6 @@ body, p {
 }
 
 body {
-    transform: scale(0.8);
     transform-origin: top left;
     width: 125%; 
     overflow-x: hidden;
@@ -24,15 +23,13 @@ body {
 nav {
     background: #4e6aff; 
     padding: 10px 20px;
-    position: fixed; /* Keeps it stuck at the top */
     top: 0;
     left: 0;
-    width: 125%; /* Counteracts the 0.8 scaling */
+    width: 100%; 
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transform: scale(1.25); /* Inverse scaling to compensate */
     transform-origin: top left;
     height: 50px;
 }
@@ -178,7 +175,7 @@ nav ul li a:hover {
 
 
 .banner {
-    width: 125%;
+    width: 100;
     text-align: center;
     overflow: hidden;
 }
@@ -187,7 +184,6 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     display: block;
-    transform: scale(1.25); /* Fixes the size mismatch */
     transform-origin: top left;
 }
 
