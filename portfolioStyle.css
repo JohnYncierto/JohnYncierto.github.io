@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     font-size: 20px;
     margin: 0;
-    padding-top: 50px;
+    padding-top: 60px;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -20,11 +20,11 @@ body {
 nav {
     background: #4e6aff;
     padding: 10px 20px;
-    position: fixed;
+    position: fixed;  /* Fix the navbar to the top */
     top: 0;
     left: 0;
-    width: 100vw; /* Ensure it spans the full width */
-    z-index: 1000;
+    width: 100vw;  /* Full width */
+    z-index: 1000;  /* Ensures it's above other elements */
     display: flex;
     align-items: center;
     justify-content: space-between;
