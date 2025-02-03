@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("navbar");
+    const navbar = document.getElementById("nav-center");
     
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
