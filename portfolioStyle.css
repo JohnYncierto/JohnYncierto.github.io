@@ -9,11 +9,16 @@ body, p {
 }
 
 body {
+    background-image: url('images/pBackground.png'); /* Replace with your actual image */
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center 0px;
+    background-attachment: fixed;
+    transition: background-position 0.1s ease-out;
     line-height: 1.6;
     font-size: 20px;
     margin: 0;
     padding-top: 60px;
-    background-color: #f4f4f4;
     color: #333;
 }
 
@@ -241,7 +246,7 @@ footer p {
     transition: all 0.3s ease-in-out;
 }
 
-/* When scrolled down (modify styles as needed) */
+
 .nav-center.scrolled {
     background-color: rgba(0, 0, 0, 0.8); /* Darker background */
     padding: 10px 20px; /* Adjust padding if needed */
