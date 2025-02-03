@@ -151,10 +151,6 @@ nav ul li a:hover {
     height: auto;
 }
 
-#about img {
-    max-width: 200px;
-    border-radius: 10px;
-}
 .banner {
     width: 100vw; /* Full viewport width */
     text-align: center; /* Center image if smaller than viewport */
