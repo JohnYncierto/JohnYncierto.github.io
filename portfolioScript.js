@@ -20,16 +20,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.querySelectorAll(".navLink").forEach(link => {
-    link.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default jump
-        const targetId = this.getAttribute("href").substring(1);
-        document.getElementById(targetId).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
-
 function sendEmail() {
     window.location.href = "mailto:jhyncierto@gmail.com";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".navLink").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Stop default jump
+            const targetId = this.getAttribute("href").substring(1); // Remove #
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+    });
+});
