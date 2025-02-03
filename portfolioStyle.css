@@ -197,15 +197,17 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center; /* Center everything horizontally */
+    align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Add space between elements */
+    text-align: center; /* Ensures text is centered */
 }
 
 .footer-left, .footer-right {
     flex: 1;
     max-width: 50%;
+    font-size: 18px; /* Increase text size */
 }
 
 .footer-left ul {
@@ -227,8 +229,8 @@ footer {
 }
 
 .footer-right {
-    text-align: right;
-    font-size: 14px;
+    text-align: center; /* Center text */
+    font-size: 18px; /* Increase text size */
 }
 
 footer p {
