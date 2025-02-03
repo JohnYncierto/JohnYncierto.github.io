@@ -111,24 +111,6 @@ nav ul li a:hover {
 
 }
 
-.section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #e9ecef;
-    border-left: 5px solid #007bff;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; /* Ensures spacing between text and images */
-    flex-wrap: wrap;
-}
-
-.section p {
-    flex: 1; /* Allows text to take remaining space */
-}
-
-.section h2 {
-    margin: 0 0 10px;
-}
 
 #about {
     display: flex;
@@ -156,6 +138,26 @@ nav ul li a:hover {
     height: auto;
     border-radius: 0; /* Ensures no rounding for certificates */
 }
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #e9ecef;
+    border-left: 5px solid #007bff;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Ensures spacing between text and images */
+    flex-wrap: wrap;
+}
+
+.section p {
+    flex: 1; /* Allows text to take remaining space */
+}
+
+.section h2 {
+    margin: 0 0 10px;
+}
+
 
 .banner {
     width: 100vw; /* Full viewport width */
