@@ -18,18 +18,18 @@ body {
 }
 
 nav {
-    background: #4e6aff; /* Adjusted to match the banner blue */
+    background: #4e6aff;
     padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
-    height: 40px;
-    width: 100%;
+    width: 100vw; /* Ensure it spans the full width */
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Centers everything */
+    justify-content: space-between;
     line-height: 40px;
+    box-sizing: border-box; /* Prevents padding from affecting size */
 }
 
 .nav-left {
