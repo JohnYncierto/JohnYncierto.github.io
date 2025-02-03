@@ -25,32 +25,19 @@ function sendEmail() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Navbar scroll effect (change appearance when scrolling)
-    const navbar = document.querySelector(".nav-center"); 
-    if (navbar) {
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled"); // Add class when scrolled
-            } else {
-                navbar.classList.remove("scrolled"); // Remove class when at the top
-            }
-        });
-    }
-
-    // Smooth scrolling for nav links
     document.querySelectorAll(".navLink").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default jump
-            const targetId = this.getAttribute("href").substring(1); // Remove #
+            event.preventDefault(); // Prevent the default anchor jump
+
+            const targetId = this.getAttribute("href").substring(1); 
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
+                // Smoothly scroll to the target section
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60, 
+                    behavior: "smooth"
                 });
-            } else {
-                console.error("Section not found: " + targetId);
             }
         });
     });
@@ -58,5 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("scroll", function () {
     let scrollPosition = window.scrollY;
-    document.body.style.backgroundPosition = `center ${scrollPosition * 0.5}px`; // Adjust speed
+    document.body.style.backgroundPosition = `center ${scrollPosition * 0.5}px`; 
 });
