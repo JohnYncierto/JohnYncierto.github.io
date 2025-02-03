@@ -10,16 +10,17 @@ body, p {
 
 body {
     background-image: url('images/pBackground.png'); 
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center 0px;
-    background-attachment: fixed;
-    transition: background-position 0.1s ease-out;
+    background-attachment: fixed; 
     line-height: 1.6;
     font-size: 20px;
     margin: 0;
     padding-top: 60px;
     color: #333;
+    height: 100vh; 
+    overflow-x: hidden;
 }
 
 nav {
