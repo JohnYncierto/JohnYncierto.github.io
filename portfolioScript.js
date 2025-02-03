@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.getElementById("nav-center");
-    
+    const navbar = document.querySelector("nav"); 
+
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
             navbar.classList.add("scrolled");
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Button hover effect
     const buttons = document.querySelectorAll(".btn");
     buttons.forEach(button => {
         button.addEventListener("mouseover", function () {
@@ -18,31 +19,32 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.remove("hover");
         });
     });
-});
 
-function sendEmail() {
-    window.location.href = "mailto:jhyncierto@gmail.com";
-}
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scrolling for navigation links
     document.querySelectorAll(".navLink").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent the default anchor jump
+            event.preventDefault(); 
 
-            const targetId = this.getAttribute("href").substring(1); 
+            const targetId = this.getAttribute("href").substring(1);
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 60, 
+                    top: targetElement.offsetTop - 60,
                     behavior: "smooth"
                 });
             }
         });
     });
+
+    // Background scrolling effect
+    document.addEventListener("scroll", function () {
+        let scrollPosition = window.scrollY;
+        document.body.style.backgroundPosition = `center ${scrollPosition * 0.3}px`;
+    });
 });
 
-document.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY;
-    document.body.style.backgroundPosition = `center ${scrollPosition * 0.3}px`; 
-});
+
+function sendEmail() {
+    window.location.href = "mailto:jhyncierto@gmail.com";
+}

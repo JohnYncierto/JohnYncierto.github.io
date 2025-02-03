@@ -36,6 +36,11 @@ nav {
     justify-content: space-between;
     line-height: 40px;
     box-sizing: border-box; 
+    transition: all 0.3s ease-in-out;
+}
+nav.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 5px 15px;
 }
 
 .nav-left {
@@ -241,13 +246,3 @@ footer {
 footer p {
     margin: 0;
 } 
-
-.nav-center {
-    transition: all 0.3s ease-in-out;
-}
-
-
-.nav-center.scrolled {
-    background-color: rgba(0, 0, 0, 0.8); 
-    padding: 10px 20px; 
-}
