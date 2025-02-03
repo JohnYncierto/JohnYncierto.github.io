@@ -1,3 +1,4 @@
+/* General Font Styles */
 h1, h2, h3, .logo, nav ul li a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -10,53 +11,53 @@ body, p {
 
 body {
     line-height: 1.6;
-    font-size: 20px;
+    font-size: 1rem; /* Using rem for better scaling */
     margin: 0;
     padding-top: 50px;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Navigation */
 nav {
-    background: #4e6aff; /* Adjusted to match the banner blue */
-    padding: 10px 20px;
+    background: #4e6aff;
+    padding: 1rem 2vw; /* Use vw for responsiveness */
     position: fixed;
     top: 0;
     left: 0;
-    height: 40px;
     width: 100%;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Centers everything */
-    line-height: 40px;
+    justify-content: space-between;
+    line-height: 1.6;
 }
 
 .nav-left {
     color: white;
-    font-size: 28px;
+    font-size: 2vw; /* Use vw for responsive scaling */
     font-weight: bold;
     margin-right: 20px;
 }
 
 .nav-center {
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     flex: 1;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between tabs */
+    gap: 2vw;
 }
 
 .navLink {
-    color: white; 
+    color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem; /* Use rem for better scaling */
     font-weight: bold;
 }
 
 .projLink {
-    color: #000000; 
+    color: #000;
     text-decoration: underline;
     font-weight: normal;
 }
@@ -66,7 +67,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 20px; /* Adds spacing between items */
+    gap: 2vw; /* Use vw for responsive spacing */
 }
 
 nav ul li {
@@ -76,55 +77,53 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 nav ul li a.projLink {
-    color: #000000; 
-  }
+    color: #000;
+}
 
 nav ul li a:hover {
     background-color: aliceblue;
-    color: #000000;
-    padding: 10px;
+    color: #000;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
 }
 
-/* Prevents elements from touching the three dots */
-
-
-
-.intro{
+/* Containers */
+.intro {
     font-size: larger;
 }
+
 .container {
     width: 90%;
     margin: auto;
     background: white;
-    padding: 20px;
-
+    padding: 2rem;
 }
 
-
+/* About Section */
 #about {
     display: flex;
-    align-items: flex-start; /* Aligns text and image at the top */
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2vw;
 }
+
 .section {
     margin-bottom: 30px;
-    padding: 20px;
-    background: #e9ecef;
+    padding: 2rem;
+    background: white;
     border-left: 5px solid #007bff;
 }
 
 .section-content {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .section-text {
@@ -132,7 +131,7 @@ nav ul li a:hover {
 }
 
 .section-img {
-    max-width: 200px;
+    max-width: 25vw; /* Use viewport width for responsiveness */
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -140,69 +139,70 @@ nav ul li a:hover {
 
 .additional-images {
     display: flex;
-    gap: 20px;
+    gap: 2vw;
     margin-top: 20px;
     justify-content: center;
 }
 
 .additional-images img {
-    max-width: 400px;
+    max-width: 80%; /* Use percentage for responsiveness */
     height: auto;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .logo-img {
-    width: 200px;
-    height: 200px;
+    width: 20vw; /* Use viewport width for responsiveness */
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .section p {
-    flex: 1; /* Allows text to take remaining space */
+    flex: 1;
 }
 
 .section h2 {
-    margin: 0 0 10px;
+    margin: 0 0 1rem;
 }
 
-
+/* Banner */
 .banner {
-    width: 100vw; /* Full viewport width */
-    text-align: center; /* Center image if smaller than viewport */
+    width: 100vw;
+    text-align: center;
 }
 
 .banner img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     display: block;
 }
 
+/* Footer */
 footer {
-    background-color: #4e6aff; /* Same as the nav bar color */
+    background-color: #4e6aff;
     color: white;
-    padding: 20px;
+    padding: 2rem;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 2rem;
 }
 
 .footer-content {
     display: flex;
-    justify-content: center; /* Center everything horizontally */
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px; /* Add space between elements */
-    text-align: center; /* Ensures text is centered */
+    gap: 2vw;
+    text-align: center;
 }
 
 .footer-left, .footer-right {
     flex: 1;
     max-width: 50%;
-    font-size: 18px; /* Increase text size */
+    font-size: 1.2rem; /* Use rem for consistent font size */
 }
 
 .footer-left ul {
@@ -211,7 +211,7 @@ footer {
 }
 
 .footer-left ul li {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .footer-left a {
@@ -224,23 +224,25 @@ footer {
 }
 
 .footer-right {
-    text-align: center; /* Center text */
-    font-size: 18px; /* Increase text size */
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 footer p {
     margin: 0;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1200px) {
     nav {
         flex-direction: column;
         text-align: center;
+        padding: 1rem 5%;
     }
 
     .container {
-        width: 100%; /* Ensure the container fits the screen */
-        padding: 10px;
+        width: 100%;
+        padding: 1rem;
     }
 
     .footer-content {
@@ -249,41 +251,69 @@ footer p {
     }
 
     .footer-left, .footer-right {
-        max-width: 100%; /* Allow both sections to use full width */
-        font-size: 1rem; /* Slightly smaller text on smaller screens */
-    }
-
-    .footer-left ul li {
-        margin-bottom: 8px; /* Adjust spacing between items */
-    }
-
-    .banner img {
-        width: 100%; /* Ensure the banner image scales well */
+        max-width: 100%;
+        font-size: 1rem;
     }
 
     .section-content {
-        flex-direction: column; /* Stack images and text for smaller screens */
-        align-items: flex-start; /* Align to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .logo-img {
-        width: 150px; /* Scale logo image for smaller screens */
-        height: auto;
+        width: 15vw;
     }
 
     .additional-images img {
-        max-width: 100%; /* Ensure images fit within the screen */
-        height: auto;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width: 768px) {
     body {
-        font-size: 1rem; /* Reduce font size for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller text for mobile */
     }
 
     nav {
-        padding: 10px 5%; /* Adjust padding on very small screens */
+        padding: 1rem 3%;
+    }
+
+    .nav-left {
+        font-size: 2rem;
+    }
+
+    .nav-center {
+        font-size: 1.2rem;
+        gap: 3vw;
+    }
+
+    .footer-content {
+        font-size: 1rem;
+        gap: 1.5rem;
+    }
+
+    .section-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .additional-images img {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 0.8rem; /* Even smaller font for small devices */
+    }
+
+    .container {
+        padding: 0.8rem;
     }
 
     .nav-left {
@@ -292,25 +322,28 @@ footer p {
 
     .nav-center {
         font-size: 1rem;
-        gap: 1.5vw;
+        gap: 5vw;
     }
 
     .footer-content {
-        font-size: 1rem; /* Reduce font size in footer */
-        gap: 15px;
+        font-size: 1rem;
+    }
+
+    .footer-left, .footer-right {
+        max-width: 100%;
+        font-size: 0.9rem;
     }
 
     .section-content {
-        flex-direction: column; /* Stack text and image for smaller screens */
+        flex-direction: column;
         text-align: center;
     }
 
-    .section-img {
-        max-width: 100%; /* Ensure images scale properly */
-        margin-bottom: 20px;
+    .logo-img {
+        width: 20vw;
     }
 
     .additional-images img {
-        max-width: 80%; /* Slightly reduce image size on smaller screens */
+        max-width: 85%;
     }
 }
