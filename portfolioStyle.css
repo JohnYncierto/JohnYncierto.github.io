@@ -120,11 +120,6 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.section img {
-    max-width: 150px;
-    margin-right: 20px;
-    border-radius: 10px;
-}
 
 .section h2 {
     margin: 0 0 10px;
