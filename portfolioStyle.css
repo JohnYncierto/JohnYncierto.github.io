@@ -236,3 +236,13 @@ footer {
 footer p {
     margin: 0;
 } 
+
+.nav-center {
+    transition: all 0.3s ease-in-out;
+}
+
+/* When scrolled down (modify styles as needed) */
+.nav-center.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background */
+    padding: 10px 20px; /* Adjust padding if needed */
+}

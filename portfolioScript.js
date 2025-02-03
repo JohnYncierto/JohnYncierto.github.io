@@ -25,9 +25,22 @@ function sendEmail() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Navbar scroll effect (change appearance when scrolling)
+    const navbar = document.querySelector(".nav-center"); 
+    if (navbar) {
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled"); // Add class when scrolled
+            } else {
+                navbar.classList.remove("scrolled"); // Remove class when at the top
+            }
+        });
+    }
+
+    // Smooth scrolling for nav links
     document.querySelectorAll(".navLink").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Stop default jump
+            event.preventDefault(); // Prevent default jump
             const targetId = this.getAttribute("href").substring(1); // Remove #
             const targetElement = document.getElementById(targetId);
 
@@ -36,6 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     behavior: "smooth",
                     block: "start"
                 });
+            } else {
+                console.error("Section not found: " + targetId);
             }
         });
     });
