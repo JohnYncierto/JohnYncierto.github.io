@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.5  // Trigger when 50% of the section is in view
+        threshold: 0.5  
     });
     
     sections.forEach(section => {

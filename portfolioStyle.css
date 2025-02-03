@@ -144,7 +144,7 @@ nav ul li a:hover {
 
 .section.animate {
     opacity: 1;
-    transform: translateY(0);  /* Move the section into view */
+    transform: translateY(0);  
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
