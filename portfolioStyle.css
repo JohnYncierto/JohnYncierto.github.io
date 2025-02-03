@@ -151,15 +151,15 @@ nav ul li a:hover {
 }
 
 .additional-images img {
-    max-width: 700px;
+    max-width: 500px;
     height: auto;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .logo-img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
