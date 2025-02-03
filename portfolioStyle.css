@@ -24,16 +24,17 @@ body {
 nav {
     background: #4e6aff; 
     padding: 10px 20px;
-    position: fixed;
+    position: fixed; /* Keeps it stuck at the top */
     top: 0;
     left: 0;
-    height: 40px;
-    width: 100%;
+    width: 125%; /* Counteracts the 0.8 scaling */
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    line-height: 40px;
+    justify-content: space-between;
+    transform: scale(1.25); /* Inverse scaling to compensate */
+    transform-origin: top left;
+    height: 50px;
 }
 
 .nav-left {
@@ -177,14 +178,17 @@ nav ul li a:hover {
 
 
 .banner {
-    width: 100vw;
-    text-align: center; 
+    width: 125%;
+    text-align: center;
+    overflow: hidden;
 }
 
 .banner img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     display: block;
+    transform: scale(1.25); /* Fixes the size mismatch */
+    transform-origin: top left;
 }
 
 footer {
