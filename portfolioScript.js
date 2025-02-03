@@ -21,5 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function sendEmail() {
-    window.location.href = 'mailto:john.yncierto@email.com';
+    window.location.href = "mailto:jhyncierto@gmail.com";
 }
