@@ -1,3 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/Icon.png">
+    <link rel="stylesheet" href="portfolioStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Digital Course Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">My Digital Portfolio</div>
+        <div class="nav-center">
+            <a href="#about" class="navLink">About Me</a>
+            <a href="#html" class="navLink">HTML Projects</a>
+            <a href="#css" class="navLink">CSS Projects</a>
+            <a href="#js" class="navLink">JavaScript Projects</a>
+            <a href="#other" class="navLink">Other Projects</a>
+            <a href="#contact" class="navLink">Contact</a>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="/images/pBanner.png" alt="Banner Image">
+    </div>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="section-content">
+                <img src="images/profile.jpg" alt="Profile Image" class="section-img">
+                <div class="section-text">
+                    <p>Hi! I am John Herbert Yncierto. This portfolio showcases my progress and achievements in the BS CS course, particularly web development.</p>
+                    <p>I am currently a 2nd Year student of MMCM in the CCIS BS CS or Computer Science course. During my time as a student in this course, I have learned skills ranging from Microsoft usage, software development in languages such as Python, Java, and C#. Over the course of this recent semester, I have learned plenty of basic concepts in web development.</p>
+                    <p>Some of my official credentials include a Microsoft Office Specialist certificate and a Java course certificate.</p>
+                </div>
+            </div>
+            <div class="additional-images">
+                <img src="images/javaCert.jpg" alt="Java Certificate">
+                <img src="images/microCert.png" alt="Microsoft Office Certificate">
+            </div>
+        </section>
+
+        <section id="html" class="section">
+            <h2>HTML Projects</h2>
+            <div class="section-content">-
+                <img src="images/HTMLlogo.png" alt="HTML Project Placeholder" class="logo-img">
+                <div class="section-text">
+                    <ul>
+                        <li><a href="YnciertoExplorePHTours.html" class="projLink">Explore PH Tours</a></li>
+                        <li><a href="YnciertoCourseSchedule.html" class="projLink">2nd Term Course Schedule</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="css" class="section">
+            <h2>CSS Projects</h2>
+            <div class="section-content">
+                <img src="images/CSSlogo.png" alt="CSS Project Placeholder" class="logo-img">
+                <div class="section-text">
+                    <ul>
+                        <li><a href="Yncierto_W5_CSS_Acts1-4/Yncierto_W5_CSS_Act1/index.html" class="projLink">CSS demo Part 1</a></li>
+                        <li><a href="Yncierto_W5_CSS_Acts1-4/Yncierto_W5_CSS_Act2/index.html" class="projLink">CSS demo Part 2</a></li>
+                        <li><a href="Yncierto_W5_CSS_Acts1-4/Yncierto_W5_CSS_Act3/index.html" class="projLink">CSS demo Part 3</a></li>
+                        <li><a href="Yncierto_W5_CSS_Acts1-4/Yncierto_W5_CSS_Act4/index.html" class="projLink">CSS demo Part 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="js" class="section">
+            <h2>JavaScript Projects</h2>
+            <div class="section-content">
+                <img src="images/JSlogo.png" alt="JavaScript Project Placeholder" class="logo-img">
+                <div class="section-text">
+                    <ul>
+                        <li><a href="Yncierto_Js_Activities/Yncierto_JS_Part1/index.html" class="projLink">Count up on click</a></li>
+                        <li><a href="Yncierto_Js_Activities/Yncierto_JS_Part2/index.html" class="projLink">Simple To-Do List Maker</a></li>
+                        <li><a href="Yncierto_Js_Activities/Yncierto_JS_Part3/index.html" class="projLink">Password Change</a></li>
+                        <li><a href="Yncierto_Js_Activities/Yncierto_JS_Part4/index.html" class="projLink">Selected Date Difference</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="other" class="section">
+            <h2>Other Notable Projects</h2>
+            <div class="section-content">
+                <div class="additional-images">
+                    <img src="images/Java.png" alt="Other Projects Placeholder">
+                    <img src="images/Csharp.png" alt="Other Projects Placeholder">
+                    <img src="images/Python.png" alt="Other Projects Placeholder">
+                </div>            
+                <div class="section-text">
+                    <ul>
+                        <li><a href="https://github.com/JohnYncierto/BikeShopManager.git" class="projLink">C# Point of Sale System</a></li>
+                        <li><a href="https://github.com/JohnYncierto/Turtle-Trainer.git" class="projLink">Python Turtle-Trainer Quiz</a></li>
+                        <li><a href="https://github.com/JohnYncierto/ShopSense.git" class="projLink">Java Sales Managing App</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
+
 h1, h2, h3, .logo, nav ul li a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -92,7 +199,12 @@ nav ul li a:hover {
 }
 
 /* Prevents elements from touching the three dots */
-
+@media screen and (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 
 .intro{
@@ -117,7 +229,7 @@ nav ul li a:hover {
 .section {
     margin-bottom: 30px;
     padding: 20px;
-    background: white;
+    background: #e9ecef;
     border-left: 5px solid #007bff;
 }
 
@@ -231,86 +343,3 @@ footer {
 footer p {
     margin: 0;
 }
-
-@media screen and (max-width: 1200px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .container {
-        width: 100%; /* Ensure the container fits the screen */
-        padding: 10px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left, .footer-right {
-        max-width: 100%; /* Allow both sections to use full width */
-        font-size: 1rem; /* Slightly smaller text on smaller screens */
-    }
-
-    .footer-left ul li {
-        margin-bottom: 8px; /* Adjust spacing between items */
-    }
-
-    .banner img {
-        width: 100%; /* Ensure the banner image scales well */
-    }
-
-    .section-content {
-        flex-direction: column; /* Stack images and text for smaller screens */
-        align-items: flex-start; /* Align to the left */
-    }
-
-    .logo-img {
-        width: 150px; /* Scale logo image for smaller screens */
-        height: auto;
-    }
-
-    .additional-images img {
-        max-width: 100%; /* Ensure images fit within the screen */
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 1rem; 
-    }
-
-    nav {
-        padding: 10px 5%; 
-    }
-
-    .nav-left {
-        font-size: 1.5rem;
-    }
-
-    .nav-center {
-        font-size: 1rem;
-        gap: 1.5vw;
-    }
-
-    .footer-content {
-        font-size: 1rem; /* Reduce font size in footer */
-        gap: 15px;
-    }
-
-    .section-content {
-        flex-direction: column; /* Stack text and image for smaller screens */
-        text-align: center;
-    }
-
-    .section-img {
-        max-width: 100%; /* Ensure images scale properly */
-        margin-bottom: 20px;
-    }
-
-    .additional-images img {
-        max-width: 80%; /* Slightly reduce image size on smaller screens */
-    }
-} 
