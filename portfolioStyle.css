@@ -174,8 +174,8 @@ nav ul li a:hover {
 
 
 .banner {
-    width: 100vw; /* Full viewport width */
-    text-align: center; /* Center image if smaller than viewport */
+    width: 100vw; 
+    text-align: center; 
 }
 
 .banner img {
