@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // Smoothly scroll to the target section
                 window.scrollTo({
                     top: targetElement.offsetTop - 60, 
                     behavior: "smooth"
