@@ -119,6 +119,12 @@ nav ul li a:hover {
     flex-wrap: wrap;
     gap: 20px;
 }
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Align text and image at the top */
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
 
 .profile-img {
