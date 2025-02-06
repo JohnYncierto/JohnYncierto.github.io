@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* Forces full width & height */
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensures full viewport coverage */
+    width: 100vw; /* Ensures full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #ff4c4c; /* Bright Pokémon red */
+    margin-bottom: 20px;
+}
+
+#pokemonStats {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #0066cc;
+    border-radius: 10px;
+    background-color: #fff;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #0066cc;
+}
+
+#pokemonImage {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+input, button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    width: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #007bff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#pokemonInput {
+    font-family: 'Poppins', sans-serif;
+}

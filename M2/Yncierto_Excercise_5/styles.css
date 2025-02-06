@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-image: url(images/bg.png);
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed;
+}
+#quoteDisplay {
+    font-family: 'Dancing Script', cursive;
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+#author {
+    font-style: italic;
+    color: #555;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: brown;
+}
+.social-btn {
+    width: 50px;
+    cursor: pointer;
+    display: block; 
+    margin: 20px auto 0; 
+}
+.social-btn:hover {
+    transform: scale(1.1);
+}
