@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Pokemon Stats Viewer</title>
+    <style>
+       body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-image: url(images/background.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%; /* Forces full width & height */
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh; /* Ensures full viewport coverage */
+            width: 100vw; /* Ensures full width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: #ff4c4c; /* Bright Pokémon red */
+            margin-bottom: 20px;
+        }
+
+        #pokemonStats {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #0066cc;
+            border-radius: 10px;
+            background-color: #fff;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #0066cc;
+        }
+
+        #pokemonImage {
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+
+        input, button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            font-family: 'Poppins', sans-serif;
+            width: 200px;
+            margin-bottom: 20px;
+            border: 1px solid #007bff;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #0066cc;
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #pokemonInput {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokemon Stats Viewer</h1>
+    <input type="text" id="pokemonInput" placeholder="Enter Pokémon name">
+    <button id="fetchPokemonBtn">Fetch Pokemon Stats</button>
+
+    <div id="pokemonStats">
+        <h2 id="pokemonName">Loading...</h2>
+        <img id="pokemonImage" src="" alt="Pokemon Image">
+        <p id="pokemonId"></p>
+        <p id="pokemonHeight"></p>
+        <p id="pokemonWeight"></p>
+        <p id="pokemonAbilities"></p>
+        <p id="pokemonTypes"></p>
+    </div>
+
+    <script>
+        const pokemonNameElement = document.getElementById('pokemonName');
+        const pokemonImageElement = document.getElementById('pokemonImage');
+        const pokemonIdElement = document.getElementById('pokemonId');
+        const pokemonHeightElement = document.getElementById('pokemonHeight');
+        const pokemonWeightElement = document.getElementById('pokemonWeight');
+        const pokemonAbilitiesElement = document.getElementById('pokemonAbilities');
+        const pokemonTypesElement = document.getElementById('pokemonTypes');
+        const button = document.getElementById('fetchPokemonBtn');
+        const pokemonInput = document.getElementById('pokemonInput');
+
+        // Function to fetch Pokémon stats from the PokeAPI
+        function fetchPokemonStats() {
+            const pokemonName = pokemonInput.value.toLowerCase();  
+
+            if (!pokemonName) {
+                alert('Please enter a Pokémon name');
+                return;
+            }
+
+            // Reset the content
+            pokemonNameElement.textContent = 'Loading...';
+            pokemonImageElement.src = '';
+            pokemonIdElement.textContent = '';
+            pokemonHeightElement.textContent = '';
+            pokemonWeightElement.textContent = '';
+            pokemonAbilitiesElement.textContent = '';
+            pokemonTypesElement.textContent = '';
+
+            // Fetch Ditto stats from PokeAPI
+            fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+            
+                .then(response => response.json())
+                .then(data => {
+                    const pokemon = data;
+                    pokemonNameElement.textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+                    pokemonImageElement.src = pokemon.sprites.front_default;
+                    pokemonIdElement.textContent = `Pokédex ID: ${pokemon.id}`;
+                    pokemonHeightElement.textContent = `Height: ${pokemon.height / 10} m`; 
+                    pokemonWeightElement.textContent = `Weight: ${pokemon.weight / 10} kg`; 
+
+                    const abilities = pokemon.abilities.map(ability => ability.ability.name).join(', ');
+                    pokemonAbilitiesElement.textContent = `Abilities: ${abilities}`;
+
+                    const types = pokemon.types.map(type => type.type.name).join(', ');
+                    pokemonTypesElement.textContent = `Types: ${types}`;
+                })
+                .catch(error => {
+                    console.error('Error fetching Pokémon data:', error);
+                    pokemonNameElement.textContent = 'Failed to load Pokémon data';
+                });
+        }
+
+        // Fetch Pokémon stats when the button is clicked
+        button.addEventListener('click', fetchPokemonStats);
+
+        // Fetch Ditto stats when the page loads
+        fetchPokemonStats();
+    </script>
+</body>
+</html>

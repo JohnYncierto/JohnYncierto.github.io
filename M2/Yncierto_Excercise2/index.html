@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create JSON File</title>
+</head>
+<body>
+    <script>
+        // JSON string
+        const jsonString = '{"name": "John", "age": 30,"city":"Digos" , "hobbies": ["reading", "gaming", "drawing"]}';
+        // Parse JSON string into a JavaScript object
+        const jsonObject = JSON.parse(jsonString);
+        console.log(jsonObject.name); 
+        console.log(jsonObject.age); 
+        console.log(jsonObject.hobbies);
+        // Convert JavaScript object back to JSON string
+        const newJsonString = JSON.stringify(jsonObject);
+        console.log(newJsonString); 
+    </script>
+</body>
+</html>

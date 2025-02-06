@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+        <title>Random Quote Generator</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin-top: 50px;
+                background-image: url(images/bg.png);
+                background-size: 80% auto; 
+                background-position: center center; 
+                background-attachment: fixed;
+            }
+            #quoteDisplay {
+                font-family: 'Dancing Script', cursive;
+                margin: 20px 0;
+                font-size: 1.5em;
+                color: #333;
+            }
+            #author {
+                font-style: italic;
+                color: #555;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 1em;
+                background-color: brown;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: brown;
+            }
+            .social-btn {
+                width: 50px;
+                cursor: pointer;
+                display: block; 
+                margin: 20px auto 0; 
+            }
+            .social-btn:hover {
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Random Quote Generator</h1>
+        <div id="quoteDisplay">
+            <p id="quote">Click the button to get a random quote!</p>
+            <p id="author"></p>
+        </div>
+        <button id="newQuoteBtn">Get New Quote</button>
+        <button id="copyQuoteBtn">Copy to Clipboard</button>    
+        <img src="images/X_logo.jpg" class="social-btn" id="tweetQuoteBtn" alt=" Tweet">
+        
+        <script>
+            const quoteElement = document.getElementById('quote');
+            const authorElement = document.getElementById('author');
+            const button = document.getElementById('newQuoteBtn');
+            const copyQuoteBtn = document.getElementById('copyQuoteBtn');
+            const tweetQuoteBtn = document.getElementById('tweetQuoteBtn');
+            // Function to fetch a random quote
+            function fetchQuote() {
+                // Show loading message while fetching
+                quoteElement.textContent = 'Loading quote...';
+                authorElement.textContent = '';
+                // Fetch all quotes from the DummyJSON API
+                fetch('https://dummyjson.com/quotes')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Get a random quote from the list of quotes
+                    const randomIndex = Math.floor(Math.random() *
+                    data.quotes.length);
+                    const randomQuote = data.quotes[randomIndex];
+                    // Display the quote and author
+                    quoteElement.textContent = `"${randomQuote.quote}"`;
+                    authorElement.textContent = `- ${randomQuote.author}`;
+                })
+                .catch(error => {
+                    // Handle any errors that occur during the fetch
+                    console.error('Error fetching quote:', error);
+                    quoteElement.textContent = 'Failed to load quote. Please tryagain.';
+                    authorElement.textContent = '';
+                });
+            }
+
+            copyQuoteBtn.addEventListener('click', () => {
+                const quoteText = `${quoteElement.textContent} ${authorElement.textContent}`;
+                navigator.clipboard.writeText(quoteText).then(() => {
+                    alert('Quote copied to clipboard!');
+                }).catch(err => {
+                    console.error('Failed to copy quote:', err);
+                });
+            });
+
+            tweetQuoteBtn.addEventListener('click', () => {
+                const quoteText = `${quoteElement.textContent} ${authorElement.textContent}`;
+                const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(quoteText)}`;
+                window.open(tweetUrl, '_blank');
+            });
+
+        // Fetch a quote when the button is clicked
+        button.addEventListener('click', fetchQuote);
+        // Fetch a quote when the page loads
+        fetchQuote();
+        </script>
+    </body>
+</html>
